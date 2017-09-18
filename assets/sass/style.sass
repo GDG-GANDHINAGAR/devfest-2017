@@ -1,7 +1,122 @@
-@import "base/normalize"
+@import './materialize'
 
-nav
-  width: 100%
-  background: #ff4545
-main
-  background: #FAFAFA
+.inline-block
+    display: inline-block
+nav#nav
+    background: #fff
+    .brand-logo
+        color: #000
+        img
+            height: 30px
+            margin: 17px 0 0 15px
+    .button-collapse
+        color: #000
+    ul
+        li
+            a
+                color: #FF9800
+.header
+    height: calc(100vh - 56px)
+    background: #Fff
+    position: relative
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.15)
+.stats
+    min-height: 250px
+    background: #FF9800
+    padding: 10px
+    .discription
+        color: #212121
+        font-weight: 300
+        font-size: 1.4em
+    .stat-wrapper
+        padding-top: 10px
+        padding-bottom: 10px
+        color: #212121
+        .number
+            font-size: 3.5em
+            font-family: Roboto
+            font-weight: 300
+            line-height: 1.4
+        .text
+            font-weight: 300
+.speakers
+    .title
+        font-size: 3em
+        font-weight: 300
+        padding: 20px
+    .speaker-wrapper
+        margin-top: 20px
+        .img-wrapper
+            width: 130px
+            height: 130px
+            margin: 0 auto 15px auto
+            @media #{$small-and-down}
+                width: 110px
+                height: 110px
+            border-radius: 500px
+            overflow: hidden
+
+            img
+                width: 100%
+                height: 100%
+        .name
+            font-size: 1.2em
+            font-weight: 400
+        .line
+            color: #90a4ae
+            font-weight: 300
+.details
+    .organizer,.about-gdg
+        padding: 20px
+        .title
+            font-size: 3em
+            font-weight: 300
+            padding: 20px  0
+        .text
+            font-weight: 200
+            font-size: 1.4em
+            padding-bottom: 20px
+        .link
+            i
+                vertical-align: middle
+
+.partners
+    .title
+        font-size: 3em
+        padding: 20px
+        font-weight: 300
+    .sub-title
+        font-size: 1.4em
+        font-weight: 300
+    .content
+        vertical-align: middle
+        .text
+            color: #90a4ae
+            padding: 10px 0
+        .img-wrapper
+            width: 200px
+            margin: auto
+            padding: 10px
+            img
+                width: 100%
+.footer
+    background: #f3f3f3
+    padding: 10px
+    .logo
+        .img-wrapper
+            height: 45px
+            width: auto
+            @media (max-width: 750px)
+                width: 300px
+                height: auto
+                padding: 0 5px
+            img
+                height: 100%
+                @media (max-width: 750px)
+                    width: 100%
+    .copyright
+        @media (min-width: 750px)
+            padding-top: 20px
+            float: right
+        font-weight: 300
+        color: #909090
