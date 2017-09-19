@@ -14,24 +14,42 @@ nav#nav
     ul
         li
             a
-                color: #FF9800
+                color: #673ab7
 .header
     height: calc(100vh - 56px)
     background: #Fff
     position: relative
+    overflow: hidden
     box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.15)
+    .img-wrapper    
+        position: absolute
+        top: 50%
+        left: 50%
+        height: calc(80vh - 56px)
+        z-index: 10
+        width: 80%
+        transform: translate(-50%,-50%)
+        img
+            height: 100%
+            width: 100%
+            object-fit: contain
+    .icon
+        position: absolute
+        z-index: 1
+        top: -100px
+        left: -100px
 .stats
     min-height: 250px
-    background: #FF9800
+    background: #673ab7
     padding: 10px
     .discription
-        color: #212121
+        color: #fff
         font-weight: 300
         font-size: 1.4em
     .stat-wrapper
         padding-top: 10px
         padding-bottom: 10px
-        color: #212121
+        color: #fff
         .number
             font-size: 3.5em
             font-family: Roboto
