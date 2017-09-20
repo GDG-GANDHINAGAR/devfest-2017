@@ -59,8 +59,8 @@ gulp.task('watch', function() {
 
   // init server
   browserSync.init({
+    files: ['index.html', 'schedule.html'],
     server: {
-      proxy: "local.build",
       baseDir: "./"
     }
   });

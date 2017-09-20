@@ -1,6 +1,23 @@
 console.log('hello');
 $(".button-collapse").sideNav();
 var iconNumber = Math.round(80 * ($(window).width() / 1920));
+var links = [{
+    id: 'home',
+    active: true
+  },
+  {
+    id: 'schedule',
+    active: false
+  },
+  {
+    id: 'speakers',
+    active: false
+  },
+  {
+    id: 'team',
+    active: false
+  }
+]
 addeIcon()
 var iconsPlaced = false;
 $(window).resize(function() {
@@ -8,6 +25,22 @@ $(window).resize(function() {
   iconNumber = Math.round(60 * ($(window).width() / 1920));
   console.log($(window).width(), iconNumber)
   addeIcon()
+})
+$(document).ready(function() {
+  $('nav li').click(function() {
+    $('.active').removeClass('active')
+    $(this).addClass('active')
+    $('.show').removeClass('show')
+    $('.visible').removeClass('visible');
+    id = $(this).children('a').attr('href').split('#')[1]
+      // console.log()for
+    for (i = 0; i < links.length; i++) {
+      if (links[i].id == id) {
+        $('#' + id).addClass('visible')
+        $('#' + id).addClass('show')
+      }
+    }
+  })
 })
 
 function addeIcon() {
