@@ -186,15 +186,20 @@ nav#nav
         display: inline-block
     .schedule-wrapper 
       padding: 50px 0 50px 30px 
+      @media (max-width: 600px)
+        height: 530px
       .schedule-item
         margin: 20px 0
         &.long
-          height: 460px
-          @media (min-width: 940px)
+          @media (min-width: 600px) and (max-width: 995px)
+            height: 460px !important
+          @media (min-width: 965px)
             height: 220px
         .time-wrapper  
           &.long
             height: 440px
+            @media (max-width: 600px)
+              height: auto
           vertical-align: top
           .big
             font-size: 3em
@@ -207,14 +212,16 @@ nav#nav
         .details
           &.long
             transform: translate(71px,-200px)
-            @media (min-width: 940px)
+            @media (min-width: 965px)
               transform: translate(0,0)
+            @media (max-width: 600px)
+              transform: translate(0,20px)
           margin-left: 20px
           border: 1px solid #cecece
           padding: 15px 
           width: 400px
           @media (max-width: 600px)
-            width: 250px
+            width: calc(100% - 50px)
           .title-wrapper
             height: 100px
             .title
