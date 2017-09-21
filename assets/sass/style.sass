@@ -2,7 +2,14 @@
 .inline-block
   display: inline-block
 nav#nav
-  background: #fff
+  box-shadow: none
+  transition: box-shadow 0.3s ease
+  border-bottom: 2px solid #f0f0f0
+  background: rgba(255,255,255,0)
+  &.shadow
+    background: rgba(255,255,255,1)
+    border-bottom: none
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2)
   .brand-logo
     color: #000
     img
@@ -23,7 +30,8 @@ nav#nav
   &.tbd
     height: 200px
   .header
-    height: calc(100vh - 56px)
+    height: calc(100vh + 64px)
+    top: -64px
     background: #Fff
     position: relative
     overflow: hidden
@@ -46,6 +54,7 @@ nav#nav
       top: -100px
       left: -100px
   .stats
+    margin-top: -64px
     min-height: 250px
     background: #673ab7
     padding: 10px
@@ -132,7 +141,7 @@ nav#nav
       height: 150px
     width: 100%
     position: relative
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.1)
+    border-bottom: 2px solid #f0f0f0
     .title
       position: absolute
       bottom: 100px
@@ -219,7 +228,7 @@ nav#nav
       height: 150px
     width: 100%
     position: relative
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.1)
+    border-bottom: 2px solid #f0f0f0
     .title
       position: absolute
       bottom: 150px
@@ -241,6 +250,32 @@ nav#nav
   .speaker-wrapper  
     margin: 50px 0
   .speaker
+    max-width:  250px
+    margin: 20px auto
+    height: 290px
+    text-align: center
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.07), 0 2px 2px 0 rgba(0,0,0,0.15)
+    padding: 10px
+    transition: all 0.5s ease
+    &:hover
+      box-shadow: 0 0px 8px 0 rgba(0,0,0,0.07), 0 4px 4px 0 rgba(0,0,0,0.40)
+    .img-wrapper 
+      width: 150px
+      height: 150px 
+      border-radius: 100px
+      margin: auto
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .name
+      font-size: 1.6em
+    .about
+      color: #888888
+      .place
+        padding: 10px 0
+  .team
     max-width:  250px
     margin: 20px auto
     height: 290px

@@ -13,7 +13,7 @@ $(document).ready(function() {})
 function addIcon() {
   for (i = 0; i < iconNumber; i++) {
     currentIcon = randomGenrator(6, true)
-    $('.header').append('<img src="assets/img/' + currentIcon + '.svg" alt="" class="icon icon-' + currentIcon + ' dir' + randomGenrator(4, true) + '">')
+    $('.header').append('<img src="assets/img/' + currentIcon + '.svg" alt="" class="icon icon-' + currentIcon + ' dir' + randomGenrator(6, true) + '">')
     if (i == (iconNumber - 1)) {
       iconsPlaced = true
       addStyle();
@@ -59,6 +59,8 @@ function startMove() {
       $(".dir2").css('transform', "translate(" + (x * -1) + "px," + (y * -1) + "px)");
       $(".dir3").css('transform', "translate(" + (x * -1) + "px," + (y) + "px)");
       $(".dir4").css('transform', "translate(" + (x) + "px," + (y * -1) + "px)");
+      $(".dir5").css('transform', "translate(" + (x * -0.5) + "px," + (y * -1.5) + "px)");
+      $(".dir6").css('transform', "translate(" + (x * -1.5) + "px," + (y) + "px)");
       $(this).unbind(event);
     }
   });
