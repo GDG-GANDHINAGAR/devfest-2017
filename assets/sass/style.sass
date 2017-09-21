@@ -188,7 +188,13 @@ nav#nav
       padding: 50px 0 50px 30px 
       .schedule-item
         margin: 20px 0
+        &.long
+          height: 460px
+          @media (min-width: 940px)
+            height: 220px
         .time-wrapper  
+          &.long
+            height: 440px
           vertical-align: top
           .big
             font-size: 3em
@@ -199,6 +205,10 @@ nav#nav
             font-weight: 100
             color: #7f7f7f
         .details
+          &.long
+            transform: translate(71px,-200px)
+            @media (min-width: 940px)
+              transform: translate(0,0)
           margin-left: 20px
           border: 1px solid #cecece
           padding: 15px 
