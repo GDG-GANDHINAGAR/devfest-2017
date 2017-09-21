@@ -12,9 +12,6 @@ var gutil = require('gulp-util');
 
 //import required dependencies
 
-//concatenate js files
-
-
 var onError = function(err) {
   notify.onError({
     title: "Gulp error in " + err.plugin,
