@@ -5,9 +5,8 @@ nav#nav
   box-shadow: none
   transition: box-shadow 0.3s ease
   border-bottom: 2px solid #f0f0f0
-  background: rgba(255,255,255,0)
+  background: rgba(255,255,255,1)
   &.shadow
-    background: rgba(255,255,255,1)
     border-bottom: none
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2)
   .brand-logo
@@ -80,25 +79,48 @@ nav#nav
       padding: 20px
     .speaker-wrapper
       margin-top: 20px
-      .img-wrapper
-        width: 130px
-        height: 130px
-        margin: 0 auto 15px auto
-        @media #{$small-and-down}
-          width: 110px
-          height: 110px
-        border-radius: 500px
+    .speaker
+      max-width:  320px
+      margin: 30px auto
+      height: 380px
+      text-align: center
+      padding: 20px
+      transition: all 0.5s ease
+      &:hover
+        box-shadow: 0 0px 8px 0 rgba(0,0,0,0.07), 0 4px 4px 0 rgba(0,0,0,0.40)
+      .img-wrapper 
+        width: 150px
+        height: 150px 
+        border-radius: 100px
+        margin: auto
         overflow: hidden
-
         img
           width: 100%
           height: 100%
+          object-fit: cover
       .name
-        font-size: 1.2em
-        font-weight: 400
-      .line
-        color: #90a4ae
-        font-weight: 300
+        margin: 20px 0
+        font-size: 1.6em
+      .about
+        color: #888888
+        .place
+          margin: 20px 0
+        .work 
+          margin: 20px 0
+      .links
+        margin: 20px 0
+        a
+          margin: 5px
+          font-size: 1.3em
+          color: #888888
+          transition: all 0.3s ease
+          &:hover
+            color: #454545
+
+
+
+
+
   .details
     .organizer,.about-gdg
       padding: 20px
@@ -221,6 +243,76 @@ nav#nav
               .about
                 color: #888888
 #speakers,#team
+  .modal
+    .modal-content
+      position: relative
+      padding: 190px 0 0 0 
+      @media (max-width: 700px)
+        padding: 0
+      .title-wrapper
+        position: absolute
+        top: 0
+        width: 100%
+        height: 50%
+        @media (max-width: 700px)
+          position: static
+        .title
+          position: sticky
+          width: 100%
+          top: 0
+          padding: 40px
+          @media (max-width: 700px)
+            padding: 20px 20px 0 20px
+          background: #f4f4f4
+          .img-wrapper 
+            @media (max-width: 700px)
+              display: block
+              margin: auto
+            height: 100px
+            width: 100px
+            border-radius: 100px
+            overflow: hidden
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+          .name
+            padding-left: 20px
+            vertical-align: top
+            line-height: 100px
+            font-size: 2em
+            font-weight: 300
+            @media (max-width: 700px)
+              line-height: auto
+              text-align: center
+    .about
+      padding: 10px 40px 0
+      @media (max-width: 700px)
+        padding: 10px 20px 0
+      .place
+        font-size: 1.4em
+        padding: 10px 0
+      .work
+        font-size: 1.2em
+        color: #7b7b7b
+        padding: 10px 0
+      .links
+        margin: 20px 0
+        a
+          margin: 5px
+          font-size: 1.3em
+          color: #888888
+          transition: all 0.3s ease
+          &:hover
+            color: #454545
+      .session
+        .title
+          font-size: 1.4em
+          padding: 10px 0
+        .text 
+          font-size: 1.2em
+          color: #7b7b7b
+          padding: 10px 0
   .title-warpper  
     background: #fff
     height: 300px
@@ -250,12 +342,11 @@ nav#nav
   .speaker-wrapper  
     margin: 50px 0
   .speaker
-    max-width:  250px
-    margin: 20px auto
-    height: 290px
+    max-width:  320px
+    margin: 30px auto
+    height: 430px
     text-align: center
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.07), 0 2px 2px 0 rgba(0,0,0,0.15)
-    padding: 10px
+    padding: 20px
     transition: all 0.5s ease
     &:hover
       box-shadow: 0 0px 8px 0 rgba(0,0,0,0.07), 0 4px 4px 0 rgba(0,0,0,0.40)
@@ -270,11 +361,23 @@ nav#nav
         height: 100%
         object-fit: cover
     .name
+      margin: 20px 0
       font-size: 1.6em
     .about
       color: #888888
       .place
-        padding: 10px 0
+        margin: 20px 0
+      .work 
+        margin: 20px 0
+    .links
+      margin: 20px 0
+      a
+        margin: 5px
+        font-size: 1.3em
+        color: #888888
+        transition: all 0.3s ease
+        &:hover
+          color: #454545
   .team
     max-width:  250px
     margin: 20px auto
