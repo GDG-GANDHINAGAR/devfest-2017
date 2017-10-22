@@ -11,7 +11,7 @@ $(window).scroll(function() {
 
 function myMap() {
   var mapOptions = {
-    center: new google.maps.LatLng(23.2026592, 72.5825373),
+    center: new google.maps.LatLng(23.1947423, 72.636183),
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.MAP
   }
