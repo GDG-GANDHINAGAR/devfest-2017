@@ -1,4 +1,4 @@
-Starter kit for basic web projects
+GDG Gandhinagar Devfest Site
 ===================================
 
 A starter project including full setup for GulpJS, SASS, AutoPrefixer &amp; BrowserSync
